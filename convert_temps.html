@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Temperature Converter</title>
+</head>
+<body>
+    <main>
+
+        <script>
+            // This makes sure the program uses strict mode
+            "use strict";
+
+            // Simple user input with no validations
+            let userInput = prompt("Enter Fahrenheit temperature");
+
+            // Takes the user input and converts it to a float number
+            let f = parseFloat(userInput);
+
+            // Converts fahrenheit to celsius
+            let c = (f - 32) * 5 / 9;
+
+            // Creates a div element that contains the div content with inline styling for the padding, border and width.
+            document.write('<div style="padding:12px 18px; border: 3px solid black; width:fit-content;">');
+
+            // Creates an h1 element
+            document.write('<h1>Convert from Fahrenheit to Celsius</h1>')
+
+            // Creates a p element that takes our f and c and rounds it to 1 decimal when displayed.
+            // (If the values needed to be used elsewhere, it's important to implement the fixed decimal in the actual code and not in the displayed element.)
+            document.write(`<p>${f.toFixed(1)} F = ${c.toFixed(1)} C</p>`);
+
+            // Creates an end div element to close off the div we created
+            document.write('</div>');
+        </script>
+    </main>
+</body>
+</html>
